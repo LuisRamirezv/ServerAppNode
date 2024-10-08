@@ -2,13 +2,13 @@
 
 This is a project made in class of Server-Side Programming. the idea is create a server connected with a database in MySQL.
 
-## Technologies used
+## Technologies used.
 
 - Node.js
 - JavaScript
 - MySQL Workbench
 
-## SERVERS SIDE
+## SERVERS SIDE.
 
 - Initialize the Node location using the following command:
 
@@ -41,7 +41,7 @@ app.listen(port, function());
 ```js
 console.log("App connected to port " + port);
 ```
-## CLIENT SIDE
+## CREATING AND CONNECTING A DATABASE.
 
 -
 

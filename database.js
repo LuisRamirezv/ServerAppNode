@@ -14,10 +14,9 @@ var connection = mysql.createConnection({
     user: "root",
     password: "password"
 
-
 });
 
 // Import the database information throught the connection var
 // To enable tjhis we will export the conenction
 
-module.exports = connection; // This variable contains the info about 
+module.exports = connection; // This variable contains the info about the database

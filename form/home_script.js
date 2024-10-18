@@ -1,38 +1,40 @@
-// Style the backgrounf in JS
+// Style the background in JS 
 // Using the DOM API
+// The body is what houses the background of the page 
 
-const body = document.body;
-// Now we can access and manipulate the body of the home page
+const body = document.body; 
+// Now we can access and manipulate the body of our page through this variable 
 
 // Create a button toggle the background
-// Call the button to check wehn it's clicked
-// To all classes we use .
+// Call the button to check when it's clicked
+// To call classes we use .
 // To call IDs we use #
-
-const button = document.querySelector(".buttton-container ")
+const button = document.querySelector(".button-container button");
 
 // Create the logic
-// Check what the current background is
-// Then change the background to a different one
-// When the button is clicked
+// Check what the current background is 
+// Then change the background toa  different one 
+// when the button is clicked
+let background = 1; 
 
-let background = 1;
+function toggleBackground(){
 
-function toggleBackGround(){
+    // This is the function that we will sue to change the background
+    //  The logic employe here must adhere to the requirements of the variable 
+    background = background === 1 ? 2 : 1; //check the operator 
+    // If the operator is 1 we want to assign background number 2
 
-    // This is the function thay we will sue to change the background
-    // the logic employe here must adhere to the requirement
-
-    background = background === 1 ? 2 : 1; // Check the operator
-    // If the operator is 1 we want to assign background number 1
-
-    body.classList.remove(`bg- ${3-background}`); // Remove the class of the current background
-    body.classList.add(`bg- ${background}`);
+    body.classList.remove(`bg-${3-background}`); // remove the class of the current background 
+    body.classList.add(`bg-${background}`);
     // The next thing we need to do is give the bg class
-
 }
 
+// Event Listener 
+// The event listener takes in the method and function name
+button.addEventListener("click", toggleBackground);
 
-// Event listener
-// the event listener takes in the method and function name
-button.addEventListener("click", toggleBackGround);
+
+
+
+
+

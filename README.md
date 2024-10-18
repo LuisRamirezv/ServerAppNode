@@ -66,6 +66,7 @@ npm install mysql
 ```js
 var connection = require("./database")
 ```
+- We use de function require() to import a module from another file.
 - Use the relative path for the connection, in this case the database file is in the same folder as Express.
 - In the Express.js file, we have to update the app.get code, creating a variable to store a mysql code choosing the table inside.
 ```js
@@ -91,12 +92,52 @@ connection.connect(function(err){
 ```
 - The port are going to connect with the database, the server app are gogint to read what is in the database  and the port is going to take that information and sen it back. The port check staus of the traffic.
 
+## CONNECT THE SERVER TO THE FORM PAGE
+
+-Our database is fully connected and the server reads the information.
+- The next step is connect the server and get the information on screen
+- Reemplazing the connection.query funtion inside the espress.js file for:
+```js
+res.sendFile(__dirname + "/form/form.html");
+```
+- If we run this file, and open in a web browser the following path 'localhost:3000'
+we will se the form webpage opw using the port 3000.
+
+ ## GIVE AN STYLE AND ASSOCIATED FILES TO THE FORM
+
+- First we have to give access to the styling and other associente.
+```js
+app.use(express.static(__dirname + "/form/form.html"));
+```
+- The next step is server the comunication between these files.
+```js
+app.use(express.urlencoded({extended:true}));
+```
+- Add the reference into the form.html file to connect with the css file.
+
+```html
+<head>
+    ...
+     <link rel="stylesheet" type="text/css" href="style.css">
+     ...
+</head>
+ ```
+-
 
 
 
-## GET THE FORM FORM THE SERVER APP
 
-- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

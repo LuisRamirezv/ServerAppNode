@@ -16,6 +16,7 @@ var connection = mysql.createConnection({
 
 });
 
+
 // Import the database information throught the connection var
 // To enable tjhis we will export the conenction
 
